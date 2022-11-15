@@ -28,7 +28,7 @@ const SignUpBox = () => {
 
     const onChangeNickname = (e) => {
         setName(e.currentTarget.value);
-        setDuplicatedId(true);
+        setDuplicatedName(true);
         console.log("nickname : " + nickname);
     }
 
@@ -78,7 +78,7 @@ const SignUpBox = () => {
                 if(res.data.duplicated === false) {
                     alert("닉네임이 중복이 됩니다.");
                 } else {
-                    setDuplicatedId(true);
+                    setDuplicatedName(true);
                     alert("중복되지 않은 닉네임 입니다.");
                 }
             });
